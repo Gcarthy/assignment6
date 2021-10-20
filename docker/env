@@ -1,0 +1,4 @@
+MYSQL_DATABASE=homeworkdb
+MYSQL_HOST=gcarthy-msisdb.c1qewdpsdimh.us-east-2.rds.amazonaws.com
+MYSQL_USER=gcarthyadmin
+MYSQL_PASSWORD=Coaster1997##123

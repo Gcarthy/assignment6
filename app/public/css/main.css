@@ -1,0 +1,57 @@
+body {
+    background-color: #F0F8FF;
+    color: #696969;
+  }
+
+  h1 {
+    color:#6A5ACD;
+  }
+
+  a {
+    color: #FF0000;
+  }
+
+  #homeTitle{
+      Color: #B22222;
+  } 
+
+  /* Thumbnail reference from W3Schools */
+  /*Styleing From Tristen github */
+  img {
+    padding: 5px; 
+    width: 150px;
+  }
+
+  th[role=columnheader]:not(.no-sort) {
+    cursor: pointer;
+  }
+  
+  th[role=columnheader]:not(.no-sort):after {
+    content: '';
+    float: right;
+    margin-top: 7px;
+    border-width: 0 4px 4px;
+    border-style: solid;
+    border-color: #404040 transparent;
+    visibility: hidden;
+    opacity: 0;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  th[aria-sort=ascending]:not(.no-sort):after {
+    border-bottom: none;
+    border-width: 4px 4px 0;
+  }
+  
+  th[aria-sort]:not(.no-sort):after {
+    visibility: visible;
+    opacity: 0.4;
+  }
+  
+  th[role=columnheader]:not(.no-sort):hover:after {
+    visibility: visible;
+    opacity: 1;
+  }

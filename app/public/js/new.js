@@ -3,7 +3,7 @@ const New = {
         return {
             person: undefined,
             books:[],
-            offerForm: {}
+            bookForm: {}
         }
     },
     computed: {
@@ -39,12 +39,12 @@ const New = {
             })
         },
 
-            postNewOffer(evt) {             
-                console.log("Posting!", this.offerForm);
+            postNewBook(evt) {             
+                console.log("Posting!", this.bookForm);
         
                 fetch('api/book/create.php', {
                     method:'POST',
-                    body: JSON.stringify(this.offerForm),
+                    body: JSON.stringify(this.bookForm),
                     headers: {
                       "Content-Type": "application/json; charset=utf-8"
                     }
@@ -56,7 +56,7 @@ const New = {
                     this.books = json;
                     
                     // reset the form
-                    this.offerForm = {};
+                    this.bookForm = {};
                   });
         }
     },

@@ -52,8 +52,8 @@
   </form>
   </div>
 
-
-  <div class="table-format col-lg-12 text-center" id="App">
+<div id="App">
+  <div class="table-format col-lg-12 text-center">
     <table class="table table-dark table-hover sortable-theme-bootstrap" data-sortable>
       <thead>
         <tr>
@@ -73,7 +73,7 @@
           <td>{{ b.author }}</td>
           <td>{{ b.yearPublished }}</td>
           <td>{{ b.publisher }}</td>
-          <td>{{ b.pageCount }}</td>
+          <td>{{ b.pgCount }}</td>
           <td>{{ prettyDollar(b.msrp) }}</td>
         </tr>
       </tbody>
@@ -81,7 +81,7 @@
   </div>
 
   
-  <form id='App' v-on:submit.prevent="postNewBook">
+  <form v-on:submit.prevent="postNewBook">
     <div class="mb-3">
       <label for="title" class="form-label">Title</label>
       <input type="text" v-model="bookForm.title"
@@ -100,8 +100,8 @@
       <input type="text" v-model="bookForm.publisher" class="form-control" id="publisher">
     </div>
     <div class="mb-3">
-      <label for="pageCount" class="form-label">Page Count</label>
-      <input type="number" v-model="bookForm.pageCount" class="form-control" id="pageCount">
+      <label for="pgCount" class="form-label">Page Count</label>
+      <input type="number" v-model="bookForm.pgCount" class="form-control" id="pgCount">
     </div>
     <div class="mb-3">
       <label for="msrp" class="form-label">MSRP</label>
@@ -109,6 +109,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

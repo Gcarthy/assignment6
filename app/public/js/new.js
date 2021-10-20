@@ -1,4 +1,4 @@
-const New = {
+const offer = {
     data() {
         return {
             person: undefined,
@@ -42,7 +42,7 @@ const New = {
             postNewBook(evt) {             
                 console.log("Posting!", this.bookForm);
         
-                fetch('api/book/create.php', {
+                fetch('/api/book/create.php', {
                     method:'POST',
                     body: JSON.stringify(this.bookForm),
                     headers: {
@@ -67,4 +67,4 @@ const New = {
     }
 }
 
-Vue.createApp(New).mount('#App');
+Vue.createApp(offer).mount('#App');

@@ -19,7 +19,7 @@ try {
     exit;
 }
 
-require("class/DbConnection.php");
+require("class/dbConnection.php");
 
 // Step 0: Validate the incoming data
 // This code doesn't do that, but should ...
@@ -31,14 +31,14 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'INSERT INTO books (title, author, yearPublished, publisher, pageCount, msrp)
-  VALUES (?, ?, ?, ?, ?, ?)'
+  'INSERT INTO books (title,author,yearPublished,publisher,pageCount,msrp)
+  VALUES (?, ?, ?, ?, ?,?)'
 );
 
 $stmt->execute([
   $_POST['title'],
   $_POST['author'],
-  $_POST['yearPublushed'],
+  $_POST['yearPublished'],
   $_POST['publisher'],
   $_POST['pageCount'],
   $_POST['msrp']
@@ -52,4 +52,4 @@ $stmt->execute([
 // Here, instead of giving output, I'm redirecting to the SELECT API,
 // just in case the data changed by entering it
 header('HTTP/1.1 303 See Other');
-header('Location: ../api/book=' . $_POST['studentId']);
+header('Location: ../book/');

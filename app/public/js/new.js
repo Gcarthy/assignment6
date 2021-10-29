@@ -72,7 +72,7 @@ const offer = {
         postEditBook(evt) {
             console.log("Updating!", this.bookForm);
     
-            fetch('/api/book/update.php', {
+            fetch('../api/book/update.php', {
                 method:'POST',
                 body: JSON.stringify(this.bookForm),
                 headers: {

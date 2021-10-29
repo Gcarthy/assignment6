@@ -40,6 +40,14 @@ const offer = {
             })
         },
 
+        postBook(evt) {
+            if (this.selectedBook === null) {
+                this.postNewBook(evt);
+            } else {
+                this.postEditBook(evt);
+            }
+          },
+
             postNewBook(evt) {             
                 console.log("Posting!", this.bookForm);
         
@@ -64,7 +72,7 @@ const offer = {
         postEditBook(evt) {
             console.log("Updating!", this.bookForm);
     
-            fetch('api/book/update.php', {
+            fetch('/api/book/update.php', {
                 method:'POST',
                 body: JSON.stringify(this.bookForm),
                 headers: {
@@ -88,7 +96,7 @@ const offer = {
             }
             console.log("Delete!", o);
     
-            fetch('api/book/delete.php', {
+            fetch('../api/book/delete.php', {
                 method:'POST',
                 body: JSON.stringify(o),
                 headers: {
@@ -125,4 +133,4 @@ const offer = {
     }
 }
 
-Vue.createApp(offer).mount('#App');
+Vue.createApp(offer).mount('#bookApp');
